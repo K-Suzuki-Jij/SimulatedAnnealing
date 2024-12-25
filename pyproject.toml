@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simulated_annealing"
+version = "0.0.1"
+description = "A small library for simulated annealing"
+readme = "README.md"
+requires-python = ">=3.6"
+dependencies = []
+
+[tool.setuptools]
+packages = ["simulated_annealing", "simulated_annealing.integer"]
+package-dir = {"" = "src"}
