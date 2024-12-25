@@ -96,6 +96,8 @@ class SASystem:
         )
 
     def set_value(self, index: int, new_value: int) -> None:
+        if new_value == self.var_list[index].value:
+            return
         for i, J in self.J_list[index]:
             self.dE_list[i] += J * (new_value - self.var_list[index].value)
         self.var_list[index].set_value(new_value)
